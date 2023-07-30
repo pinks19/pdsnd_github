@@ -20,7 +20,7 @@ def get_filters():
     city = ''
     while city not in ('chicago', 'new york city', 'washington'):
     
-        city = input("which city would you like to explore?").lower()
+        city = input("which city would you like to explore?").lower()       #Using lower() function to eliminate letter casing ambiguity from user input
     print(city)
 
 
@@ -184,7 +184,7 @@ def user_stats(df):
             while row_num < df.shape[0]:
                 response = input("would you like to see 5 lines of raw data? (type 'yes' or 'no')").lower()
                 if response == 'yes':
-                    print(df.iloc[min(row_num, df.shape[0])-5:min(row_num, df.shape[0]),:]);
+                    print(df.iloc[min(row_num, df.shape[0])-5:min(row_num, df.shape[0]),:]);     # Used min() function to make sure display index never exceeds number of rows
                     row_num += 5
                 else:
                     break
