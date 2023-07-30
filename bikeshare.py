@@ -20,7 +20,7 @@ def get_filters():
     city = ''
     while city not in ('chicago', 'new york city', 'washington'):
     
-        city = input("which city would you like to explore?").lower()
+        city = input("which city would you like to explore?").lower()       #Using lower() function to eliminate letter casing ambiguity from user input
     print(city)
 
 
